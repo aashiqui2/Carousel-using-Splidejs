@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- using splide css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+   <!-- link custom css  -->
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- unsplash api -->
+    <!-- <img src="https://source.unsplash.com/random/400x500?nature" alt=""> -->
+    <div class="splide_wrapper">
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <div class="splide__list">
+                      <div class="splide__slide">
+                        <!-- custom class img_box -->
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?nature" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?waterfall" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?lady" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?nature" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?moon" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?sky" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?lady" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?mountains" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?animal" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?water" alt="">
+                        </div>
+                      </div>
+                      <div class="splide__slide">
+                        <div class="img_box">
+                            <img src="https://source.unsplash.com/random/400x500?galaxy" alt="">
+                        </div>
+                      </div>
+                  </div>
+            </div>
+          </div>
+    </div>
+   
+   
+
+    <!-- splide js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+        var splide = new Splide( '.splide', {
+  perPage: 3,
+  perMove:1,
+  gap    : '1.5rem',
+  padding:'3rem',
+  type:'loop',
+  drag:'free',
+//   snap:false,
+  snap:true,
+//   pagination:false,
+  pagination:true,
+//   arrows:false,
+  arrows:true,
+// autoplay:false,
+autoplay:true,
+  breakpoints: {
+    640: {
+      perPage: 2,
+      gap    : '.7rem',
+    //   height : '3rem',
+    padding:'1.5rem',
+    },
+    480: {
+      perPage: 1,
+      gap    : '.7rem',
+    //   height : '6rem',
+    padding:'1.5rem',
+    },
+  },
+} );
+
+splide.mount();
+    </script>
+  </body>
+</html>
+

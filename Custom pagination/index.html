@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <!-- link custom css  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./Img/1.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/2.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/3.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/4.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/5.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/6.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/7.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/8.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/9.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/10.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/11.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./Img/12.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+    </div>
+   
+
+    <!-- js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+      const splide = new Splide(".splide",{
+        perPage:3,
+        gap:'1.5rem',
+        // This gap is for splide__track
+        padding:'3rem', 
+        type:'loop',
+        drag:'free',
+        //draging the image in the corner to see to effect 
+        snap:true,
+        // pagination:false,
+        // autoplay:true
+      });
+
+      splide.on("pagination:mounted", function (data) {
+        // You can add your class to the UL element
+        data.list.classList.add("splide__pagination--custom");
+
+        // `items` contains all dot items
+        data.items.forEach(function (item) {
+          item.button.textContent = String(item.page + 1);
+        });
+      });
+
+      splide.mount();
+    </script>
+  </body>
+</html>
